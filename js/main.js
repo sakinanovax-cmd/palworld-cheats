@@ -209,4 +209,19 @@
       target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
     });
   });
+
+  // Clone review cards in JS only (keeps HTML free of duplicate text for SEO crawlers)
+  const reviewsTrack = document.querySelector(".reviews-track");
+  if (reviewsTrack && !reduceMotion && !reviewsTrack.dataset.cloned) {
+    const originals = Array.prototype.slice.call(reviewsTrack.children);
+    originals.forEach(function (card) {
+      const clone = card.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      clone.querySelectorAll("[aria-label]").forEach(function (el) {
+        el.removeAttribute("aria-label");
+      });
+      reviewsTrack.appendChild(clone);
+    });
+    reviewsTrack.dataset.cloned = "1";
+  }
 })();

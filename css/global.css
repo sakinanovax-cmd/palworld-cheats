@@ -272,7 +272,8 @@ a:hover {
   min-height: 52px;
 }
 
-.stat strong {
+.stat strong,
+.stat-value {
   display: block;
   font-size: 1.25rem;
 }
@@ -313,6 +314,12 @@ a:hover {
   inset: auto 0 0 0;
   padding: 1rem;
   background: linear-gradient(transparent, rgba(11, 9, 20, 0.92));
+}
+
+.preview-kicker {
+  display: block;
+  font-weight: 800;
+  letter-spacing: 0.04em;
 }
 
 .preview-badge {
@@ -383,7 +390,8 @@ section {
   border-color: var(--border-strong);
 }
 
-.card h3 {
+.card h3,
+.card-title {
   margin: 0 0 0.55rem;
   font-size: 1.15rem;
 }
@@ -464,7 +472,8 @@ section {
   height: 30px;
 }
 
-.step-item h3 {
+.step-item h3,
+.step-title {
   margin: 0 0 0.7rem;
   font-size: 1.05rem;
   letter-spacing: 0.04em;
@@ -592,10 +601,44 @@ section {
   flex-shrink: 0;
 }
 
-.review-user strong {
+.review-user strong,
+.review-name {
   display: block;
   font-size: 0.92rem;
   line-height: 1.2;
+  font-weight: 700;
+}
+
+.share-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+.share-bar-label {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-right: 0.25rem;
+}
+
+.share-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.share-link:hover {
+  border-color: var(--accent);
+  color: #fff;
 }
 
 .review-user span {
@@ -766,7 +809,8 @@ section {
   margin-bottom: 2rem;
 }
 
-.footer h4 {
+.footer h4,
+.footer-heading {
   margin: 0 0 0.8rem;
   font-size: 0.95rem;
 }
@@ -960,7 +1004,8 @@ section {
   height: 22px;
 }
 
-.why-card h3 {
+.why-card h3,
+.why-title {
   margin: 0 0 0.55rem;
   font-size: 1.05rem;
 }
