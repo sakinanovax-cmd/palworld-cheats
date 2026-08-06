@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Core SEO pages
+Allow: /index.html
+Allow: /palworld-cheats.html
+Allow: /blog.html
+Allow: /guide.html
+Allow: /sitemap.html
+
+Sitemap: https://palworldhack.com/sitemap.xml

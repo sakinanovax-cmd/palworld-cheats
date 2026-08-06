@@ -1,0 +1,20 @@
+# Temp / tooling
+_*.py
+_*.html
+_*.xml
+tmp-frames/
+tmp-extract-frames.py
+apply_seo.py
+generate_blogs.py
+rebuild_blog_index.py
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Optional heavy originals (site uses thumbs + hero-bg)
+images/blog/*.png
+images/hero-bg-source.jpg
