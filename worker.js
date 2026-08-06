@@ -5,21 +5,32 @@
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    const path = url.pathname;
+    let path = url.pathname;
 
-    // Already has a file extension, or is a directory-style path with trailing slash → pass through
+    // Homepage: / must map to index.html when html_handling is none
+    if (path === "/" || path === "") {
+      const indexUrl = new URL(request.url);
+      indexUrl.pathname = "/index.html";
+      return env.ASSETS.fetch(new Request(indexUrl, request));
+    }
+
+    // Strip trailing slash: /blog/ → /blog
+    if (path.length > 1 && path.endsWith("/")) {
+      path = path.slice(0, -1);
+    }
+
     const last = path.split("/").pop() || "";
-    if (path === "/" || last.includes(".")) {
+
+    // Already has a file extension → serve as-is
+    if (last.includes(".")) {
       return env.ASSETS.fetch(request);
     }
 
-    // /palworld-cheats → try /palworld-cheats.html
+    // /palworld-cheats → /palworld-cheats.html
     const htmlUrl = new URL(request.url);
     htmlUrl.pathname = `${path}.html`;
 
-    const htmlRequest = new Request(htmlUrl, request);
-    const asset = await env.ASSETS.fetch(htmlRequest);
-
+    const asset = await env.ASSETS.fetch(new Request(htmlUrl, request));
     if (asset.status !== 404) {
       return asset;
     }
