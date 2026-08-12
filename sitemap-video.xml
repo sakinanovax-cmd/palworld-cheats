@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://palworldhack.com/palworld-cheats-preview</loc>
+    <lastmod>2026-08-13</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://palworldhack.com/images/hero-lcp.jpg</video:thumbnail_loc>
+      <video:title>Palworld Cheats Preview — ESP, Magnet &amp; Cloud DMA</video:title>
+      <video:description>Gameplay preview of Palworld cheats showing Players ESP, Pal ESP, loot filters, Object Manipulator Magnet, and Cloud DMA.</video:description>
+      <video:content_loc>https://palworldhack.com/videos/palworld-preview.mp4</video:content_loc>
+      <video:duration>29</video:duration>
+      <video:publication_date>2026-08-06T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+</urlset>

@@ -9,3 +9,4 @@ Allow: /guide.html
 Allow: /sitemap.html
 
 Sitemap: https://palworldhack.com/sitemap.xml
+Sitemap: https://palworldhack.com/sitemap-video.xml
